@@ -9,6 +9,10 @@ const storeSchema = new Schema({
         trim: true,
         maxLength: [10, "Store ID must less or equal to 10 chars"]
     },
+    address: {
+        type: String,
+        required: [true, "Please add an address"]
+    },
     location: {
         type: {
           type: String,
