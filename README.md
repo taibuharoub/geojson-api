@@ -16,6 +16,8 @@
 
 ### 🏠 [Homepage](https://github.com/taibuharoub/geojson-api#readme)
 
+## Setup
+Clone this repo to your desktop and run `npm install` to install all the dependencies.
 ## Install
 
 ```sh
@@ -24,8 +26,15 @@ npm install
 
 ## Usage
 
+Rename "config/config.env.env to "config/config.env" and update the values/settings to your own
+
 ```sh
 npm start
+```
+
+Development
+```sh
+npm run start:dev
 ```
 
 ## Run tests
