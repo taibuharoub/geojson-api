@@ -13,3 +13,19 @@ exports.getStores = async (req, res, next) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+
+exports.addStore = async (req, res, next) => {
+  try {
+      const store = await Store.create(req.body);
+      return res.status(201).json({
+        success: true,
+        data: store,
+      });
+  } catch (error) {
+    console.log(error);
+    if(error.code === 11000) {
+        return res.status(400).json({ error: "This store already exists" });
+    }
+    res.status(500).json({ error: "Server error" });
+  }
+};
